@@ -1,5 +1,22 @@
 # LeetCode_MySQL总结
 
+- ==**执行顺序**==
+
+  ```sql
+  1) from
+  2) join
+  3) on
+  4) where
+  5) group by
+  6) 聚合函数
+  7) having
+  8) 窗口函数
+  9) select
+  10) distinct
+  11) order by
+  12) limit
+  ```
+
 ## 单行函数
 
 ### 字符串函数
@@ -8,7 +25,7 @@
 
 ### 日期函数
 
-- datediff()，求日期之间的日期差值；
+- **datediff()**，求日期之间的日期差值；
 
   ```sql
   select datediff('2023-11-11', '2023-09-10');
@@ -16,11 +33,30 @@
 
   
 
-- timestampdiff(day, a.date, b.date)=-1，a比b晚一天；
+- **timestampdiff()**, timestampdiff(day, a.date, b.date)=-1，a比b晚一天；
 
   ```sql
   timestampdiff(day, a.date, b.date)
   ```
+
+- **DATE_FORMAT(date, format)** 函数用于将日期/时间类型的值按照指定的格式进行格式化输出。
+- 它的一般语法如下：其中，date 参数是要被格式化的日期/时间值，format 参数是指定的日期/时间格式，可以是一个字符串常量或者包含日期格式控制符的字符串。
+
+下面是一些常用的日期和时间格式控制符：
+
+```sql
+%Y	年份，四位数字
+%y	年份，两位数字
+%m	月份，两位数字
+%c	月份，没有前导零
+    %d	月份中的第几天，两位数字
+%e	月份中的第几天，没有前导零
+%H	小时，24小时制，两位数字
+%h	小时，12小时制，两位数字
+%i	分钟，两位数字
+%s	秒钟，两位数字
+%p	AM 或 PM
+```
 
 
 
