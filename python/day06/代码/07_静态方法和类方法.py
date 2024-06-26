@@ -16,4 +16,4 @@ class Father:
 
 
 Father.set_kind()
-print(Father.kind)
+print(Father.kind)  
